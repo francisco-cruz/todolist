@@ -1,0 +1,23 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "learn mvc",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francisco-cruz/todolist.git"
+  },
+  "author": "cisco2002 <franaraujosilva2017@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/francisco-cruz/todolist/issues"
+  },
+  "homepage": "https://github.com/francisco-cruz/todolist#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
