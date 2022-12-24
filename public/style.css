@@ -194,3 +194,39 @@ hr {
   margin-top: .5rem;
   margin-bottom: 1.2rem;
 }
+
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .2rem 1rem;
+  position: sticky;
+  top: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: auto;
+  z-index: 9999;
+}
+
+
+.message-danger {
+  background-color: rgb(255, 197, 197);
+  color: #8a0000;
+}
+
+.message-success {
+  background-color: rgb(197, 255, 214);
+  color: #008a1e;
+}
+
+
+span#close-message {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+span#close-message:hover { 
+  color: rgb(255, 0, 0);
+}
