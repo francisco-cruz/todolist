@@ -1,3 +1,151 @@
-h1 {
-  color: red;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,800;1,600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-image: linear-gradient(45deg, #7428ad, #c25fe2);
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  padding: 3rem;
+  margin-bottom: .5rem;
+  text-align: center;
+}
+
+header h1 {
+  padding-bottom: 3rem;
+  color: white;
+}
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 8px;
+  width: 70%;
+  padding: .6rem;
+  font-size: 1rem;
+  outline: none;
+  background-color: #fffefd;
+  color: #6dabe2;
+}
+
+button {
+  padding: .6rem;
+  width: 25%;
+  background-image: linear-gradient(45deg, #ff93c7, #f8cbbb);
+  box-shadow: 0 5px 20px 0 #7428ad;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  transition: all .5s;
+
+}
+button:active{
+  transform: scale(.99);
+  box-shadow: 0 5px 5px 0 #7428ad inset;
+}
+
+
+section#tasks {
+  margin: .5rem ;
+} 
+
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+  padding: 0 2rem 0 1rem;
+  background-color: white;
+  color: #ccc;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  margin-bottom: .8rem;
+  box-shadow: 0 0px 20px 0 #7428ad;
+
+  /* box-shadow: 0 5px 5px 0 #7428ad; */
+
+}
+
+ul li a {
+  /* color: white; */
+  text-decoration: none;
+
+}
+
+ul li span{
+  color: #ccc;
+  font-style: italic;
+  font-size: .8rem;
+  padding-left: 1rem;
+}
+
+ul li div{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+ul li:nth-child(odd) {
+  background-color: #faebeb;
+}
+
+ul li:hover {
+  background-color: hsl(16, 100%, 95%);
+}
+
+small {
+  padding: 0 .5rem;
+  font-size: .5rem .9rem;
+  border-radius: 8px;
+  align-items: center;
+  background-color: #7428ad;
+  color: #c87be2;
+  margin-left: 1rem;
+}
+
+a.btnUpdate {
+  background-color: #f8cbbb;
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  transition: all .3s ease-in-out;
+}
+
+a.btnUpdate:hover {
+  background-color: #f5beaa;
+}
+
+a.btnDelete {
+  background-color: #ff93c7;
+  color: white;
+
+  text-decoration: none;
+  padding: 1rem 2rem;
+  transition: all .3s ease-in-out;
+}
+
+a.btnDelete:hover {
+  background-color: #fa6fb2;
 }
