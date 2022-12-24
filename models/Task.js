@@ -13,6 +13,9 @@ const taskSchema = new mongoose.Schema({
     type: Date,
     default: Date.now(),
   },
+  edited: {
+    type: Boolean,
+  }
 });
 
 module.exports = mongoose.model("Task", taskSchema);
