@@ -9,26 +9,18 @@
     <title>To Do List</title>
   </head>
   <body>
-    <%if(message  != ""){ %>
+    <% if(message  != ""){ %>
       <section class="message message-<%= type%>">
         <p><%= message %></p>
         <span id="close-message"><i class="bi bi-x"></i></span>
       </section>
-    <%}%>
+    <% } %>
 
     <header>
       <% if (task == null){ %>
-      <h1>To Do List</h1>
-      <form action="/create" method="post">
-        <input type="text" name="task" id="task" placeholder="Send a task..." />
-        <button type="submit" id="createButton">ADD</button>
-      </form>
+        <%- include ('./components/form', {titleForm: "To Do List", action: "create", value: "", idBtn: "createButton", nameBtn: "ADD" })%>
       <% } else { %>
-      <h1>Edit Task</h1>
-      <form action="/updateOne/<%= task._id %>" method="post">
-        <input type="text" name="task" id="task" value="<%= task.task %>" />
-        <button type="submit" id="updateButton">UPDATE</button>
-      </form>
+        <%- include ('./components/form', {titleForm: "Edit Task", action: `updateOne/${task._id}`, value: task.task, idBtn: "updateButton", nameBtn: "UPDATE" })%>
       <% } %>
     </header>
 
@@ -53,20 +45,7 @@
     </section>
 
     <% if(taskDelete != null){ %>
-    <section id="modal">
-      <div id="card">
-        <div>
-          <h2>Confirm action</h2>
-          <a href="/home"><i class="bi bi-x"></i></a>
-        </div>
-        <hr />
-        <h4>Do you wanna delete this task: <%= taskDelete.task %>?</h5>
-        <div id="buttonsModal">
-          <a href="/home" id="btnNot">No</a>
-          <a href="/deleteOne/<%= taskDelete._id %>" id="btnYes">Yes</a>
-        </div>
-      </div>
-    </section>
+      <%- include ('./components/modalDel', {task:taskDelete})%>
     <% } %>
 
     <script src="/script.js"></script>
