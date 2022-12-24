@@ -65,5 +65,5 @@ module.exports = {
   createTask,
   getById,
   updateOneTask,
-  deleteOneTask
+  deleteOneTask,
 };

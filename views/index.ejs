@@ -20,7 +20,7 @@
       <h1>Edit Task</h1>
       <form action="/updateOne/<%= task._id %>" method="post">
         <input type="text" name="task" id="task" value="<%= task.task %>" />
-        <button type="submit" id="updateButton">Update</button>
+        <button type="submit" id="updateButton">UPDATE</button>
       </form>
       <% } %>
     </header>
@@ -48,12 +48,16 @@
     <% if(taskDelete != null){ %>
     <section id="modal">
       <div id="card">
-        <a href="/home"><i class="bi bi-x"></i></a>
-        <h2>Confirm action</h2>
+        <div>
+          <h2>Confirm action</h2>
+          <a href="/home"><i class="bi bi-x"></i></a>
+        </div>
         <hr />
-        <p>Do you wanna delete this task: <%= taskDelete.task %>?</p>
-        <a href="/home">No</a>
-        <a href="/deleteOne/<%= taskDelete._id %>">Yes</a>
+        <h4>Do you wanna delete this task: <%= taskDelete.task %>?</h5>
+        <div id="buttonsModal">
+          <a href="/home" id="btnNot">No</a>
+          <a href="/deleteOne/<%= taskDelete._id %>" id="btnYes">Yes</a>
+        </div>
       </div>
     </section>
     <% } %>
